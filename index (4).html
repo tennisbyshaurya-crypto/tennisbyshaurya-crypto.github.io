@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaurya Chaudhary — Software Engineer & Entrepreneur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a56db 0%, #0d47a1 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 2px;
+            transition: border-color 0.2s;
+        }
+
+        .header-links a:hover {
+            border-bottom-color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #1a56db;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #1a56db;
+        }
+
+        .project {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .project h3 {
+            font-size: 1.3rem;
+            color: #111;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.75rem;
+        }
+
+        .tech-stack {
+            display: inline-flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 0.75rem 0;
+        }
+
+        .tech-tag {
+            background: #e3f2fd;
+            color: #1a56db;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: #333;
+            line-height: 1.7;
+            margin: 1rem 0;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            color: #1a56db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .project-link:hover {
+            opacity: 0.7;
+        }
+
+        .experience {
+            margin-bottom: 1.75rem;
+        }
+
+        .experience h3 {
+            font-size: 1.2rem;
+            color: #111;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience p {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 1.5rem;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight strong {
+            color: #856404;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category h4 {
+            color: #1a56db;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .skill-category p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #1a56db;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #0d47a1;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .stat {
+            display: inline-block;
+            margin: 0 1.5rem;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a56db;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-links {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shaurya Chaudhary</h1>
+    <p>Software Engineer • ML Developer • Entrepreneur</p>
+    <div class="header-links">
+        <a href="mailto:tennisbyshaurya@gmail.com">tennisbyshaurya@gmail.com</a>
+        <a href="https://github.com/tennisbyshaurya-crypto" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/shaurya-chaudhary-5b3785405" target="_blank">LinkedIn</a>
+        <a href="#contact">Get Resume</a>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="intro">
+        <h2>About Me</h2>
+        <p>I'm a Grade 11 student at St. Mary's High School in Kitchener, Ontario. I build things — whether software, hardware, or businesses. I've shipped an ML-powered infant cry classification app at a hackathon, engineered an autonomous car with embedded systems, and launched a racket stringing business that's served 150+ customers.</p>
+        <p style="margin-top: 1rem;">I'm driven by curiosity and the discipline to see projects through to completion. I don't do things halfway.</p>
+    </section>
+
+    <section>
+        <h2>Key Highlights</h2>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem;">
+            <div class="stat">
+                <span class="stat-number">150+</span>
+                <span class="stat-label">Rackets Strung</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Model Accuracy</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">$1,500+</span>
+                <span class="stat-label">Investment Returns</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Regional Titles</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>cryOS — Intelligent Baby Nursery OS</h3>
+            <div class="project-meta">JAMHacks 10 • University of Waterloo, 2025</div>
+            <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">scikit-learn</span>
+                <span class="tech-tag">Librosa</span>
+            </div>
+            <div class="project-description">
+                <strong>Problem:</strong> Parents struggle to understand what a baby's cry means — is it hunger, pain, or discomfort?<br><br>
+                <strong>Solution:</strong> I built cryOS, a full-stack application that classifies infant cries in real time using hardware microphone audio. The app uses a Random Forest ML model trained on audio data, processes features with Librosa, and delivers instant classification via a React dashboard.<br><br>
+                <strong>Results:</strong> Achieved 98% accuracy on a held-out test set. Built and demoed the complete product in 24 hours at JAMHacks 10.
+            </div>
+            <a href="https://github.com/tennisbyshaurya-crypto/cryOS" class="project-link" target="_blank">→ View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Arduino Line-Following Autonomous Car</h3>
+            <div class="project-meta">Personal Project • In Progress, 2025</div>
+            <div class="tech-stack">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">Embedded C</span>
+                <span class="tech-tag">IR Sensors</span>
+                <span class="tech-tag">Control Theory</span>
+            </div>
+            <div class="project-description">
+                A self-driving prototype that detects white lane markers via infrared sensors and autonomously corrects steering to maintain straight-line travel. This is a self-initiated project exploring embedded systems, sensor calibration, and feedback control — no classroom requirement, just curiosity and engineering challenge.
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+
+        <div class="experience">
+            <h3>Founder & Operator — ShauryaStrings Racket Stringing</h3>
+            <div class="experience-meta">2024 – Present | Self-employed, Kitchener, ON</div>
+            <p>Identified a service gap in the local tennis community and launched a racket stringing business with <strong>zero startup capital</strong>. I handle all operations: client intake, pricing, scheduling, quality control, and business management.</p>
+            <p><strong>Results:</strong> Completed 150+ racket stringing jobs, generated $400–500 in revenue, which I reinvested into a self-directed stock portfolio that grew to $1,500+. This taught me real business discipline: if you commit to something, you do it fully or you don't do it at all.</p>
+        </div>
+
+        <div class="experience">
+            <h3>Tennis Team Captain</h3>
+            <div class="experience-meta">2024 – Present | St. Mary's High School, Kitchener, ON</div>
+            <p>Captained the school tennis team. Managed lineup decisions, led practices, and coordinated match strategy. Won multiple regional championships and competed at a university-level tournament while still in secondary school.</p>
+        </div>
+
+        <div class="experience">
+            <h3>Community Volunteer</h3>
+            <div class="experience-meta">2024 – Present | St. Mary's High School, Kitchener, ON</div>
+            <p>65+ hours of volunteering: crafted educational materials for community members with disabilities (Key Club), library cataloguing, and community service initiatives.</p>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Languages</h4>
+                <p>Python, TypeScript, JavaScript, HTML, CSS, Embedded C</p>
+            </div>
+            <div class="skill-category">
+                <h4>Frameworks & Libraries</h4>
+                <p>React, FastAPI, Tailwind CSS, scikit-learn, Librosa, Vite</p>
+            </div>
+            <div class="skill-category">
+                <h4>Tools & Platforms</h4>
+                <p>Git, GitHub, VS Code, Arduino IDE, npm</p>
+            </div>
+            <div class="skill-category">
+                <h4>Hardware</h4>
+                <p>Arduino, IR sensors, motor control, embedded systems</p>
+            </div>
+            <div class="skill-category">
+                <h4>ML & Data</h4>
+                <p>Random Forest, audio feature extraction, model training & evaluation</p>
+            </div>
+            <div class="skill-category">
+                <h4>Current Learning</h4>
+                <p>AP Calculus, Data Management, advanced React patterns, AI model training</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get My Resume</h2>
+        <p>Download my full resume for a detailed breakdown of my projects, experience, and technical skills.</p>
+        <a href="resume.pdf" download class="cta-button">Download Resume (DOCX)</a>
+        <div class="highlight">
+            <strong>Currently applying to:</strong> Hack the 6ix 2026 • University co-op programs • Summer internships in software engineering and machine learning
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Shaurya Chaudhary. Built with intention.</p>
+    <p style="margin-top: 1rem; font-size: 0.85rem;">
+        <a href="https://github.com/tennisbyshaurya-crypto" target="_blank" style="color: #aaa; text-decoration: none;">GitHub</a> •
+        <a href="https://linkedin.com/in/shaurya-chaudhary-5b3785405" target="_blank" style="color: #aaa; text-decoration: none;">LinkedIn</a> •
+        <a href="mailto:tennisbyshaurya@gmail.com" style="color: #aaa; text-decoration: none;">Email</a>
+    </p>
+</footer>
+
+</body>
+</html>
